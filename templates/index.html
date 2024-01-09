@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Classifier</title>
+</head>
+<body>
+    <h1>PDF Classifier</h1>
+    <form method="POST">
+        <input type="text" name="pdf_url" placeholder="Enter PDF URL" />
+        <input type="submit" value="Classify" />
+    </form>
+    {% if result %}
+        <p>Result: {{ result }}</p>
+    {% elif error %}
+        <p>Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
